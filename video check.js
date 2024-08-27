@@ -1,6 +1,6 @@
-/*  Modify the video-rental kiosk program so that when a movie is checked out it is
-added to a list of rented movies. Display this list whenever a customer checks out
-a movie. */
+/* Create a check-in function for the video-rental kiosk program so that a returned
+movies is deleted from the rented movies list and is added back to the available
+movies list. */
 
 // Define the Movie class with a method to display movie details
 class Movie {
@@ -44,14 +44,14 @@ class VideoRentalKiosk {
         }
     }
 
-    // Return a movie
-    returnMovie(title) {
+    // Check in (return) a movie
+    checkInMovie(title) {
         const movieIndex = this.rentedMovies.findIndex(movie => movie.title === title);
         if (movieIndex !== -1) {
             const [returnedMovie] = this.rentedMovies.splice(movieIndex, 1);
             this.movies.push(returnedMovie);
             console.log(`You have returned: ${returnedMovie.title}`);
-            this.displayRentedMovies();
+            this.displayAvailableMovies();
         } else {
             console.log(`Movie not found in rented list: ${title}`);
         }
@@ -97,7 +97,7 @@ kiosk.checkOutMovie('The Godfather'); // Checks out 'The Godfather' and displays
 kiosk.displayAvailableMovies();
 
 // Customer returns a movie
-kiosk.returnMovie('Inception'); // Returns 'Inception' and updates the lists
+kiosk.checkInMovie('Inception'); // Returns 'Inception' and updates the lists
 
 // Display all lists again
 kiosk.displayAvailableMovies();
