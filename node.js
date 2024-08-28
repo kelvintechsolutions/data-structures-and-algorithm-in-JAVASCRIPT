@@ -8,7 +8,7 @@ so they would be the last survivors. Write a program that allows you to place n
 people in a circle and specify that every mth person will be killed. The program
 should determine the number of the last two people left in the circle. Use a circularly
 linked list to solve the problem. */
-class Nodew {
+class Node {
     constructor(value) {
         this.value = value;
         this.next = null;
