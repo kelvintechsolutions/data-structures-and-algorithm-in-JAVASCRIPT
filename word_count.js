@@ -1,3 +1,6 @@
+/* Write a program using hashing that reads a text file and compiles a list of the words
+in the file with the number of times each word appears in the file. */
+
 class HashTable {
     constructor(size) {
         this.size = size;
