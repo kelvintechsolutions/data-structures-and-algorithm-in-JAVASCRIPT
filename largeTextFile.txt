@@ -1,0 +1,20 @@
+The study of networks has become one of the great scientific hotbeds of this century,
+though mathematicians and others have been studying networks for many hundreds of
+years. Recent developments in computer technology (the Internet, for example) and in
+social theory (the social network, as popularized by the concept of “six degrees of sep‐
+aration”), not to mention social media, have put a spotlight on the study of networks.
+In this chapter we’ll look at how networks are modeled with graphs. We’ll define what
+a graph is, how to represent graphs in JavaScript, and how to implement important
+graph algorithms. We’ll also discuss the importance of choosing the correct data rep‐
+resentation when working with graphs, since the efficiency of graph algorithms largely
+depends on the data structure used to represent a graph.
+Graph Definitions
+A graph consists of a set of vertices and a set of edges. Think of a map of a US state. Each
+town is connected with other towns via some type of road. A map is a type of graph
+where each town is a vertex, and a road that connects two towns is an edge. Edges are
+defined as a pair (v1, v2), where v1 and v2 are two vertices in a graph. A vertex can also
+have a weight, which is sometimes called a cost. A graph whose pairs are ordered is
+called a directed graph, or just a digraph. When pairs are ordered in a directed graph,
+an arrow is drawn from one pair to another pair. Directed graphs indicate the flow
+direction from vertex to vertex. A flowchart that indicates the direction of computations
+in a computer program is an example of a directed graph. A directed graph is shown in
