@@ -31,9 +31,9 @@ nums is a non-decreasing array.
  * @param {number} target
  * @return {number[]}
  */
-var searchRange = function(nums, target) {
-    // Helper function to find the first occurrence of the target
-    function findFirst(nums, target) {
+let searchRange = function(nums, target) {
+    // Function to find the first occurrence of the target
+    const findFirst = (nums, target) => {
         let left = 0, right = nums.length - 1;
         while (left <= right) {
             let mid = Math.floor((left + right) / 2);
@@ -50,10 +50,10 @@ var searchRange = function(nums, target) {
             }
         }
         return -1;
-    }
+    };
 
-    // Helper function to find the last occurrence of the target
-    function findLast(nums, target) {
+    // Function to find the last occurrence of the target
+    const findLast = (nums, target) => {
         let left = 0, right = nums.length - 1;
         while (left <= right) {
             let mid = Math.floor((left + right) / 2);
@@ -70,14 +70,15 @@ var searchRange = function(nums, target) {
             }
         }
         return -1;
-    }
+    };
 
-    let first = findFirst(nums, target);
+    // Find the first and last occurrence of the target
+    const first = findFirst(nums, target);
     if (first === -1) {
         return [-1, -1];
     }
+    const last = findLast(nums, target);
 
-    let last = findLast(nums, target);
     return [first, last];
 };
 
